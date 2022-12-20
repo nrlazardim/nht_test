@@ -1,5 +1,6 @@
 from getting import CalculatorMenu, operator_number, first_number, second_number
-from creating import Calculator
+from creating2 import Add, Subtract, Multiply, Division
+#from creating import Calculator
 
 
 def run():
@@ -28,16 +29,24 @@ def run():
             value_2 = second_number()
 
             if operator == 1:
-                print(f"{value_1} + {value_2} = {Calculator.add(value_1, value_2)}")
+                # print(f"{value_1} + {value_2} = {Calculator.add(value_1, value_2)}")
+                add_option = Add(value_1=value_1, value_2=value_2)
+                print(f"{value_1} + {value_2} = {add_option.operator_add}")
 
             elif operator == 2:
-                print(f"{value_1} - {value_2} = {Calculator.subtract(value_1, value_2)}")
+                # print(f"{value_1} - {value_2} = {Calculator.subtract(value_1, value_2)}")
+                subtract_option = Subtract(value_1=value_1, value_2=value_2)
+                print(f"{value_1} - {value_2} = {subtract_option.operator_subtract}")
 
             elif operator == 3:
-                print(f"{value_1} * {value_2} = {Calculator.multiply(value_1, value_2)}")
+                # print(f"{value_1} * {value_2} = {Calculator.multiply(value_1, value_2)}")
+                multiply_option = Multiply(value_1=value_1, value_2=value_2)
+                print(f"{value_1} * {value_2} = {multiply_option.operator_multiply}")
 
             elif operator == 4:
-                print(f"{value_1} / {value_2} = {Calculator.division(value_1, value_2)}")
+                # print(f"{value_1} / {value_2} = {Calculator.division(value_1, value_2)}")
+                division_option = Division(value_1=value_1, value_2=value_2)
+                print(f"{value_1} / {value_2} = {division_option.operator_division}")
 
 
 if __name__ == "__main__":  # execute only if the file was run directly, and not imported.
