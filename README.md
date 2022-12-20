@@ -1,4 +1,4 @@
-# Test de Calculadora para NHT
+# Test de Calculadora.
 
 El siguiente ejercicio consta de construir una calculadora en Python sin utilizar operadores (+,-,etc). El cual recibirá inputs de entrada y una salida (resultado)
 
