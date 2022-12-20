@@ -11,11 +11,11 @@ class Calculator:
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
-            print("XXXXXXXXXXXXXXX")  # TODO
+            print("Decimal fractions cannot be represented exactly as binary (base 2) fractions.")
         except TypeError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Please enter a number")
         except ValueError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Value of an inappropriate type")
 
     @staticmethod
     def subtract(value_1: float, value_2: float) -> float:
@@ -25,11 +25,11 @@ class Calculator:
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
-            print("XXXXXXXXXXXXXXX")  # TODO
+            print("Decimal fractions cannot be represented exactly as binary (base 2) fractions.")
         except TypeError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Please enter a number")
         except ValueError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Value of an inappropriate type")
 
     @staticmethod
     def multiply(value_1: float, value_2: float) -> float:
@@ -39,11 +39,11 @@ class Calculator:
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
-            print("XXXXXXXXXXXXXXX")  # TODO
+            print("Decimal fractions cannot be represented exactly as binary (base 2) fractions.")
         except TypeError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Please enter a number")
         except ValueError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Value of an inappropriate type")
 
     @staticmethod
     def division(value_1: float, value_2: float) -> float:  # ZeroDivisionError
@@ -51,12 +51,12 @@ class Calculator:
             division_value = operator.truediv(value_1, value_2)
             return division_value
         except ZeroDivisionError:
-            print(f"Division by zero not allowed try again")
+            print(f"Division by zero not allowed")
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
-            print("XXXXXXXXXXXXXXX")  # TODO
+            print("Decimal fractions cannot be represented exactly as binary (base 2) fractions.")
         except TypeError:
-            print("XXXXXXXXXXXXXXXXXXX")  # TODO
+            print("Please enter a number")
         except ValueError:
-            print("XXXXXXXXXXXXXXXXXXX")
+            print("Value of an inappropriate type")
