@@ -17,8 +17,6 @@ class Calculator:
         except ValueError:
             print("XXXXXXXXXXXXXXXXXXX")
 
-
-
     @staticmethod
     def subtract(value_1: float, value_2: float) -> float:
         try:

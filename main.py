@@ -39,9 +39,6 @@ def run():
             elif operator == 4:
                 print(f"{value_1} / {value_2} = {Calculator.division(value_1, value_2)}")
 
-        else:
-            print("Invalid Input")
-
 
 if __name__ == "__main__":  # execute only if the file was run directly, and not imported.
     run()
