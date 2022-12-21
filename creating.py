@@ -1,13 +1,21 @@
+from dataclasses import dataclass
 import operator
 
 
-class Calculator:
+@dataclass()
+class Add:
+    value_1: float
+    value_2: float
 
-    @staticmethod
-    def add(value_1: float, value_2: float) -> float:
+    @classmethod
+    def operator(cls, value_1: float, value_2: float):
+        instance = cls(value_1=value_1, value_2=value_2)
+        return instance
+
+    @property
+    def operator_add(self) -> float:
         try:
-            adding_value = operator.add(value_1, value_2)
-            return adding_value
+            return operator.add(self.value_1, self.value_2)
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
@@ -17,11 +25,21 @@ class Calculator:
         except ValueError:
             print("Value of an inappropriate type")
 
-    @staticmethod
-    def subtract(value_1: float, value_2: float) -> float:
+
+@dataclass()
+class Subtract:
+    value_1: float
+    value_2: float
+
+    @classmethod
+    def operator(cls, value_1: float, value_2: float):
+        instance = cls(value_1=value_1, value_2=value_2)
+        return instance
+
+    @property
+    def operator_subtract(self) -> float:
         try:
-            subtracting_value = operator.sub(value_1, value_2)
-            return subtracting_value
+            return operator.sub(self.value_1, self.value_2)
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
@@ -31,11 +49,21 @@ class Calculator:
         except ValueError:
             print("Value of an inappropriate type")
 
-    @staticmethod
-    def multiply(value_1: float, value_2: float) -> float:
+
+@dataclass()
+class Multiply:
+    value_1: float
+    value_2: float
+
+    @classmethod
+    def operator(cls, value_1: float, value_2: float):
+        instance = cls(value_1=value_1, value_2=value_2)
+        return instance
+
+    @property
+    def operator_multiply(self) -> float:
         try:
-            multiplying_value = operator.mul(value_1, value_2)
-            return multiplying_value
+            return operator.mul(self.value_1, self.value_2)
         except OverflowError:
             print("Math out of range as overflow error")
         except FloatingPointError:
@@ -45,10 +73,21 @@ class Calculator:
         except ValueError:
             print("Value of an inappropriate type")
 
-    @staticmethod
-    def division(value_1: float, value_2: float) -> float:  # ZeroDivisionError
+
+@dataclass()
+class Division:
+    value_1: float
+    value_2: float
+
+    @classmethod
+    def operator(cls, value_1: float, value_2: float):
+        instance = cls(value_1=value_1, value_2=value_2)
+        return instance
+
+    @property
+    def operator_division(self) -> float:
         try:
-            division_value = operator.truediv(value_1, value_2)
+            division_value = operator.truediv(self.value_1, self.value_2)
             return division_value
         except ZeroDivisionError:
             print(f"Division by zero not allowed")

@@ -9,36 +9,37 @@ La intención de este ejercicio es que la empresa pueda conocer mas a fondo mi p
 * 	Virtualizacion (conocimientos pipenv o vituralenv, etc.).
 
 
-## Virtualizacion
+# Terminal
 
-Usaremos la libreria **virtualenv** ya que podremos crear entornos virtuales para distintas versiones de python arbitrariamente. 
-
-Si está trabajando con **Python 3**, debe instalar **virtualenv** usando **pip3** para **mac** o **linux** o (**pip para windows**).
-
-## 1. Actualizar paquete pip3 o pip
-
-### Mac o Linux
+### Ejecutar el siguiente comando para ejecutar el algoritmo
 
 `python3 -m pip install --upgrade pip`
 
-### Windows
+### Clonar repositorio Github
 
-`python -m pip install --upgrade pip`
+#### Por SSH
+`git clone git@github.com:nrlazardim/nht_test.git` 
+
+#### Por HTTPS
+`git clone https://github.com/nrlazardim/nht_test.git`
+
+#### Instalar paquetes que se usaron en el proyecto
+`pip install -r requirements.txt`
 
 
-## 2. Activar el ambiente virtual, se debe correr el sigueinte comando
+## Virtualizacion
 
-### Mac o Linux
+### 1. Activar el ambiente virtual, se debe correr el sigueinte comando
+
 `source venv/bin/activate`
 
-### Windows
-
-XXXXX
-
-
-Una vez que se ejecute el comando del punto 2, se debe ver en la terminal lo siguiente:
+Una vez que se ejecute el comando de activacion, se debe ver en la terminal lo siguiente:
 
 `(venv)`  
+
+# Ejecucion
+
+### Ejecutar en la consola python3 main.py
 
 
 

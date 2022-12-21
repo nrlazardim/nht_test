@@ -1,6 +1,5 @@
 from getting import CalculatorMenu, operator_number, first_number, second_number
-from creating2 import Add, Subtract, Multiply, Division
-#from creating import Calculator
+from creating import Add, Subtract, Multiply, Division
 
 
 def run():
@@ -8,15 +7,9 @@ def run():
 
     while is_created:
 
-        menu_calculator = CalculatorMenu(
-            ADD="1: Add",
-            SUBTRACT="2: Subtract",
-            MULTIPLY="3: Multiply",
-            DIVIDE="4: Divide",
-            EXIT="5: Exit"
-        )
+        menu_calculator = CalculatorMenu(ADD="1: Add", SUBTRACT="2: Subtract", MULTIPLY="3: Multiply",
+                                         DIVIDE="4: Divide", EXIT="5: Exit")
         print(f"{menu_calculator}")
-
         operator = operator_number()
 
         if operator in (1, 2, 3, 4, 5):  # Make sure the user have entered the valid choice
@@ -29,22 +22,18 @@ def run():
             value_2 = second_number()
 
             if operator == 1:
-                # print(f"{value_1} + {value_2} = {Calculator.add(value_1, value_2)}")
                 add_option = Add(value_1=value_1, value_2=value_2)
                 print(f"{value_1} + {value_2} = {add_option.operator_add}")
 
             elif operator == 2:
-                # print(f"{value_1} - {value_2} = {Calculator.subtract(value_1, value_2)}")
                 subtract_option = Subtract(value_1=value_1, value_2=value_2)
                 print(f"{value_1} - {value_2} = {subtract_option.operator_subtract}")
 
             elif operator == 3:
-                # print(f"{value_1} * {value_2} = {Calculator.multiply(value_1, value_2)}")
                 multiply_option = Multiply(value_1=value_1, value_2=value_2)
                 print(f"{value_1} * {value_2} = {multiply_option.operator_multiply}")
 
             elif operator == 4:
-                # print(f"{value_1} / {value_2} = {Calculator.division(value_1, value_2)}")
                 division_option = Division(value_1=value_1, value_2=value_2)
                 print(f"{value_1} / {value_2} = {division_option.operator_division}")
 
